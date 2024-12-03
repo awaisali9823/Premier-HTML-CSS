@@ -1,0 +1,826 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f8f8f8;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+  position: relative;
+  padding-top: 0.1px;
+}
+#nav {
+  height: 10vh;
+  width: 100%;
+  /* background-color: red; */
+  margin-top: 40px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav h3 {
+  display: none;
+}
+#nav h1 {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#nav h1::after {
+  content: "©";
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  top: 15%;
+  right: 26%;
+}
+#nav h1::before {
+  content: "model management";
+  position: absolute;
+  font-size: 27%;
+  color: #666;
+  letter-spacing: 0.3px;
+  font-weight: 550;
+  bottom: 14%;
+  left: 43%;
+  /* background-color: yellow; */
+}
+#nav h2 {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid black;
+  font-size: 22px;
+  font-weight: 600;
+}
+#nav h2:nth-last-child(2) {
+  width: 10%;
+  text-align: center;
+  /* background-color: yellow; */
+}
+#nav h2:nth-last-child(1) {
+  width: 10%;
+  background-color: blue;
+  /* border: none; */
+}
+
+#center {
+  height: 90%;
+  width: 100%;
+  /* background-color: red; */
+  padding: 4vw;
+  position: relative;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  /* background-color: blue; */
+  position: relative;
+}
+#content video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#overlay {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* background-color: red; */
+  padding: 2vw;
+}
+#over1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 1vh;
+}
+#over1 h1 {
+  font-size: 3.6vw;
+  /* mix-blend-mode: difference; */
+}
+#over1 h2 {
+  font-size: 1vw;
+  /* text-align: center; */
+  padding: 1.6vw 1.8vw;
+  /* background-color: blue; */
+  border: 1px solid #fff;
+  border-radius: 50%;
+  border-bottom: 3px solid #fff;
+}
+#over2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  border-top: 2px solid #fff;
+  padding: 1.5vw 0;
+}
+#over2 h4 {
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+#over2 img {
+  height: 4vw;
+}
+
+#scroll {
+  height: 40vh;
+  width: 100%;
+  /* background-color: red; */
+  /* white-space is helping us in creating scroll animation */
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#scroll img {
+  /* display: none; */
+  height: 100%;
+  width: 16%;
+  border-radius: 50%;
+  margin: 0.3vw;
+}
+#container {
+  height: 100%;
+  width: 100%;
+  /* background-color: blue; */
+  display: inline-block;
+  padding: 2vw;
+  animation-name: anime;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#alphabet {
+  height: 10vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#alphabet h5 {
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: italic;
+  border-bottom: 2px solid black;
+  letter-spacing: 2px;
+  margin-right: 2vw;
+}
+#alphabet h6 {
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: italic;
+  /* background-color: yellow; */
+  padding: 0.25vw 0.5vw;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: all ease 0.2s;
+}
+#alphabet h6:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#page2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 5vw;
+}
+
+#page2part1 {
+  height: 100%;
+  width: 50%;
+  background-image: url(https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+#page2part2 {
+  height: 100%;
+  width: 40%;
+}
+#page2part2 img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+#part2-1 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2vw;
+  /* background-color: yellow; */
+  height: 29%;
+}
+#part2-1 h5 {
+  width: 100%;
+  height: 100%;
+  padding-top: 2.8vw;
+  line-height: 1.8vw;
+  letter-spacing: 1px;
+  /* background-color: red; */
+  font-size: 1.4vw;
+  font-weight: 500;
+  /* margin-top: -30px; */
+}
+#part2-1 p {
+  padding-top: 2.8vw;
+}
+
+#page4 {
+  width: 100%;
+  height: 100%;
+  /* background-color: yellow; */
+  padding: 4vw 4vw;
+}
+#page4 > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
+}
+
+#elem {
+  height: 15vh;
+  width: 100%;
+  /* background-color: white; */
+  border-top: 2px solid black;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  /* Below is for highlighting on over */
+  transition: all ease-in 0.5s;
+}
+#elem:hover {
+  background-color: #c2c0c0;
+}
+#elem:nth-last-child(1) {
+  border-bottom: 2px solid black;
+}
+#elem p {
+  /* background-color: yellow; */
+  width: 6%;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+}
+#elem img {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 8%;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  padding: 0.3vw;
+  opacity: 0;
+  transition: all ease-in 0.7s;
+}
+#elem:nth-last-child(1) img {
+  left: 40%;
+}
+#elem:hover img {
+  opacity: 1;
+  left: 25%;
+}
+
+#elem #elem-part2 {
+  /* background-color: red; */
+  width: 40%;
+}
+#elem-part2 h3 {
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+#elem-part2 h5 {
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#marque {
+  height: 12vh;
+  width: 100%;
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 1vw;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  /* position: relative; */
+  /* transform: translateX(0%); */
+}
+#marque h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3vw;
+  letter-spacing: 2px;
+  font-weight: 900;
+  /* background-color: yellow; */
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+  margin-right: 16px;
+  animation-name: marquetext;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes marquetext {
+  from {
+    transform: translateX(0);
+  }
+  /* by default there is 4px gap on right in using display: inline-block and we gave margin of 16px so that is why we are using calc  */
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#movie-shot {
+  height: 80%;
+  width: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4% 4% 0 4%;
+  /* gap: 5%; */
+}
+#blog {
+  width: 20%;
+  height: 100%;
+  /* background-color: pink; */
+}
+#blog h1 {
+  /* width: 100%; */
+  /* background-color: aqua; */
+  /* margin-top: 30%; */
+  padding-left: 30%;
+  font-size: 3vw;
+  font-weight: 500;
+}
+#blog-1 {
+  width: 30%;
+  height: 100%;
+  /* background-color: pink; */
+  /* padding-top: 6.5%; */
+}
+#blog-1 p {
+  font-size: 1.5vw;
+  margin-bottom: 10%;
+  /* background-color: #c2c0c0; */
+  /* width: 70%; */
+}
+#blog-1 img {
+  width: 100%;
+  height: 50%;
+}
+#blog-2 {
+  width: 30%;
+  height: 100%;
+  /* background-color: white; */
+  margin-right: 10%;
+  /* padding-top: 6.5%; */
+}
+#blog-2 p {
+  font-size: 1.5vw;
+  margin-bottom: 10%;
+}
+#blog-2 img {
+  width: 100%;
+  height: 50%;
+}
+
+#footer {
+  height: 20%;
+  width: 100%;
+  /* background-color: yellow; */
+  border-top: 2px solid black;
+  display: flex;
+}
+#footer h1 {
+  width: 35%;
+  /* background-color: aqua; */
+  text-align: center;
+  padding-top: 0.7%;
+  letter-spacing: 0.2vw;
+  position: relative;
+  padding-top: 3%;
+}
+#footer h1::after {
+  content: "©";
+  font-size: 1vw;
+  position: absolute;
+  left: 64%;
+  top: 35%;
+}
+#footer h1::before {
+  content: "model management";
+  font-size: 0.8vw;
+  font-weight: 500;
+  position: absolute;
+  letter-spacing: 0;
+  right: 35%;
+  top: 60%;
+}
+#footer h3 {
+  border-right: 2px solid black;
+  padding-top: 3.8%;
+  /* background-color: white; */
+  width: 15%;
+  padding-left: 4%;
+  font-weight: 700;
+}
+#contact {
+  width: 35%;
+  height: 100%;
+  /* background-color: pink; */
+}
+#contact h4 {
+  height: 40%;
+  border-bottom: 2px solid black;
+  padding: 3% 10%;
+  font-weight: 600;
+}
+#contact p {
+  height: 60%;
+  padding: 3% 10%;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  #nav {
+    height: 8vh;
+    margin-top: 20px;
+    padding: 0 5vw;
+  }
+  #nav h1 {
+    height: 100%;
+    width: 40%;
+    justify-content: flex-start;
+  }
+  #nav h1::after {
+    display: none;
+  }
+  #nav h1::before {
+    display: none;
+  }
+  #nav h2 {
+    display: none;
+  }
+  #nav h3 {
+    display: block;
+  }
+
+  #center {
+    height: 60%;
+    width: 100%;
+    /* background-color: red; */
+    padding: 4vw;
+    position: relative;
+  }
+  #content {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+  }
+
+  #content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #overlay {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    padding: 2vw;
+  }
+  #over1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-bottom: 1vh;
+  }
+  #over1 h1 {
+    font-size: 7vw;
+    font-weight: 300;
+    /* mix-blend-mode: difference; */
+  }
+  #over1 h2 {
+    font-size: 3vw;
+    /* text-align: center; */
+    padding: 1.6vw 1.8vw;
+    /* background-color: blue; */
+    border: 1px solid #fff;
+    border-radius: 50%;
+    border-bottom: 3px solid #fff;
+  }
+  #over2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-top: 2px solid #fff;
+    padding: 1.5vw 0;
+  }
+  #over2 h1 {
+    font-size: 5vw;
+    font-weight: 500;
+  }
+  #over2 img {
+    height: 5vw;
+  }
+
+  #scroll {
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    /* white-space is helping us in creating scroll animation */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  #alphabet {
+    height: 5vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+
+  #alphabet h5 {
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+    margin-right: 2vw;
+  }
+  #alphabet h6 {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    /* background-color: yellow; */
+    padding: 0.25vw 0.2vw;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+  }
+  #alphabet h6:hover {
+    border: 2px solid black;
+    cursor: pointer;
+  }
+
+  #page2 {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+  }
+
+  #page2part1 {
+    height: 100%;
+    width: 50%;
+    background-image: url(https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+  }
+  #page2part2 {
+    height: 100%;
+    width: 40%;
+  }
+  #page2part2 img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #part2-1 {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 2vw;
+    /* background-color: yellow; */
+    height: 29%;
+    width: 100%;
+  }
+  #part2-1 h5 {
+    padding-top: 2.8vw;
+    line-height: 1.8vw;
+    letter-spacing: 1px;
+    /* background-color: red; */
+    font-size: 1.4vw;
+    font-weight: 500;
+    width: 35%;
+    /* margin-top: -30px; */
+  }
+  #part2-1 p {
+    padding-top: 2.8vw;
+    padding-left: 2vw;
+    font-size: 1.5vw;
+    /* background-color: pink; */
+    width: 60%;
+  }
+
+  #page4 {
+    width: 100%;
+    height: 45%;
+    /* background-color: yellow; */
+    padding: 4vw 4vw;
+  }
+  #page4 > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3vw;
+  }
+
+  #elem {
+    height: 8vh;
+    width: 100%;
+    /* background-color: white; */
+    border-top: 2px solid black;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* Below is for highlighting on over */
+    transition: all ease-in 0.5s;
+  }
+  #elem:hover {
+    background-color: #c2c0c0;
+  }
+  #elem:nth-last-child(1) {
+    border-bottom: 2px solid black;
+  }
+  #elem p {
+    /* background-color: yellow; */
+    width: 6%;
+    font-size: 3vw;
+    text-transform: uppercase;
+  }
+  #elem img {
+    /* background-color: yellow; */
+    height: 80%;
+    width: 15%;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    padding: 0.3vw;
+    opacity: 0;
+    transition: all ease-in 0.7s;
+  }
+  #elem:nth-last-child(1) img {
+    left: 40%;
+  }
+  #elem:hover img {
+    opacity: 1;
+    left: 25%;
+  }
+
+  #elem #elem-part2 {
+    /* background-color: red; */
+    width: 40%;
+  }
+  #elem-part2 h3 {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  #elem-part2 h5 {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  #marque {
+    height: 5vh;
+  }
+  #marque h1 {
+    -webkit-text-stroke: 0.7px black;
+    color: transparent;
+    background-color: #f8f8f8;
+  }
+
+  #movie-shot {
+    height: 30%;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4% 4% 0 4%;
+    /* gap: 5%; */
+  }
+  #blog h1 {
+    padding-left: 0;
+    font-size: 6vw;
+  }
+  #blog-1 p {
+    font-size: 2vw;
+    margin-bottom: 5vw;
+  }
+  #blog-2 p {
+    font-size: 2vw;
+  }
+  #footer {
+    height: 10%;
+    width: 100%;
+    /* background-color: yellow; */
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #footer h1 {
+    width: 35%;
+    /* background-color: aqua; */
+    text-align: center;
+    padding-top: 0.7%;
+    letter-spacing: 0.2vw;
+    /* position: relative; */
+  }
+  #footer h1::after {
+    content: "©";
+    /* position: absolute; */
+    font-size: 3vw;
+    right: -30%;
+    top: 10%;
+  }
+  #footer h1::before {
+    display: none;
+  }
+  #footer h3 {
+    display: none;
+  }
+  #contact {
+    width: 55%;
+    height: 100%;
+    /* background-color: pink; */
+  }
+  #contact h4 {
+    display: none;
+    height: 40%;
+    border-bottom: 2px solid black;
+    padding: 3% 10%;
+    font-weight: 600;
+  }
+  #contact p {
+    padding: 4% 10%;
+    font-size: 4vw;
+  }
+}
